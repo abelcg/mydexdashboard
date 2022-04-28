@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Table } from "react-bootstrap";
 import LineChart from "../common/LineChart";
 
 const Dashboard = () => {
+  const [health, setHealth] = useState([]);
+  const [error, setError] = useState(true);
+
+  useEffect(() => {
+    getDEXHealth();
+  }, [error]);
+
+
+  const getDEXHealth = async () => {
+    const endpoint = "1/xy=k/uniswap_v2/health/?quote-currency=USD&format=JSON&key=" + process.env.KEY;
+    const url = process.env.URL + endpoint ;
+    try{
+      const res = await fetch(url);
+      const data = await res.json();
+      setHealth(data);
+      setError(false);
+      localStorage.setItem("health", JSON.stringify(data));
+    } catch (error) {
+      console.log(error);
+      setError(true);
+    }
+  };
   return (
     <>
       <div className="page-header d-flex justify-content-between align-items-center">
@@ -89,73 +111,59 @@ const Dashboard = () => {
                 >
                   <thead className="table-dark text-light">
                     <tr className="text-center">
-                      <div>
-                        <strong>Current Price</strong>
-                      </div>
+                      <td>Current Price</td>
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <div>$8.17 USD</div>
+                    <tr><td>$8.17 USD</td></tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
-                      <div>
-                        <strong>Total Value Locked</strong>
-                      </div>
+                      <td>Total Value Locked</td>
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <div>$7,405,051,932 USD</div>
+                    <tr><td>$7,405,051,932 USD</td></tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
-                      <div>
-                        <strong>Market Cap Rank</strong>
-                      </div>
+                      <td>Market Cap Rank</td>
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <div>36</div>
+                    <tr><td>36</td></tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
-                      <div>
-                        <strong>Liquidity Score</strong>
-                      </div>
+                      <td>Liquidity Score</td>
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <div>63,791</div>
+                    <tr><td>63,791</td></tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
-                      <div>
-                        <strong>Circulating Supply</strong>
-                      </div>
+                      <td>Circulating Supply</td>
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <div>456.489.583</div>
+                    <tr><td>456.489.583</td></tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
-                      <div>
-                        <strong>Total Supply</strong>
-                      </div>
+                      <td>Total Supply</td>
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <div>1.000.000.000</div>
+                    <tr><td>1.000.000.000</td></tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
-                      <div>
-                        <strong>Total Volume</strong>
-                      </div>
+                      <td>Total Volume</td>
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <div>$123,256,644 USD</div>
+                    <tr><td>$123,256,644 USD</td></tr>
                   </tbody>
                 </Table>
               </Card>
