@@ -10,7 +10,7 @@
 
 ## ✨ [Presentation](https://docs.google.com/presentation/d/1XfJzL0Hj3IEIg7NHMIoGIvqu_EVY968-vGe0YlnlqSM/edit?usp=sharing)
 
-## ✨ [Demo]()
+## ✨ [Demo](https://mydexdashboard.netlify.app/)
 <br>
 
 ## Install
@@ -35,6 +35,4 @@ npm start
 
 * GitHub: [abelcg](https://github.com/abelcg)
 
-## 🤝 Aportes
 
-Aportes, issues y solicitudes de mejoras son bienvenidas!<br />No dude en consultar la página de problemas (issues). 
