@@ -10,11 +10,12 @@ const Dashboard = () => {
     getDEXHealth();
   }, [error]);
 
-
   const getDEXHealth = async () => {
-    const endpoint = "1/xy=k/uniswap_v2/health/?quote-currency=USD&format=JSON&key=" + process.env.KEY;
-    const url = process.env.URL + endpoint ;
-    try{
+    const endpoint =
+      "1/xy=k/uniswap_v2/health/?quote-currency=USD&format=JSON&key=" +
+      process.env.KEY;
+    const url = process.env.URL + endpoint;
+    try {
       const res = await fetch(url);
       const data = await res.json();
       setHealth(data);
@@ -41,9 +42,11 @@ const Dashboard = () => {
                 <div>
                   <h6 className="text-center">Latest Block Height</h6>
                   <div className="d-flex justify-content-around">
-                    <span className="mb-0 px-4 text-primary"> 14.670.186</span>
                     <span className="mb-0 px-4 text-primary">
-                      2022-04-28 02:18:16
+                    {health?.data?.items[0]?.latest_block_height.toLocaleString()}
+                    </span>
+                    <span className="mb-0 px-4 text-primary">
+                    {health?.data?.items[0]?.latest_block_signed_at.replace("T"," ").replace("Z","")}
                     </span>
                   </div>
                 </div>
@@ -59,10 +62,10 @@ const Dashboard = () => {
                     <div className="d-flex justify-content-around">
                       <span className="mb-0 px-4 text-primary">
                         {" "}
-                        14.670.092
+                        {health?.data?.items[0]?.synced_block_height?.toLocaleString()}
                       </span>
                       <span className="mb-0 px-4 text-primary">
-                        2022-04-27 23:55:26.171
+                      {health?.data?.items[0]?.synced_block_signed_at?.replace("T"," ").replace("Z","")}
                       </span>
                     </div>
                   </div>
@@ -115,7 +118,9 @@ const Dashboard = () => {
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <tr><td>$8.17 USD</td></tr>
+                    <tr>
+                      <td>$8.17 USD</td>
+                    </tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
@@ -123,7 +128,9 @@ const Dashboard = () => {
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <tr><td>$7,405,051,932 USD</td></tr>
+                    <tr>
+                      <td>$7,405,051,932 USD</td>
+                    </tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
@@ -131,7 +138,9 @@ const Dashboard = () => {
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <tr><td>36</td></tr>
+                    <tr>
+                      <td>36</td>
+                    </tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
@@ -139,7 +148,9 @@ const Dashboard = () => {
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <tr><td>63,791</td></tr>
+                    <tr>
+                      <td>63,791</td>
+                    </tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
@@ -147,7 +158,9 @@ const Dashboard = () => {
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <tr><td>456.489.583</td></tr>
+                    <tr>
+                      <td>456.489.583</td>
+                    </tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
@@ -155,7 +168,9 @@ const Dashboard = () => {
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <tr><td>1.000.000.000</td></tr>
+                    <tr>
+                      <td>1.000.000.000</td>
+                    </tr>
                   </tbody>
                   <thead className="table-dark text-light">
                     <tr className="text-center">
@@ -163,7 +178,9 @@ const Dashboard = () => {
                     </tr>
                   </thead>
                   <tbody className="text-center">
-                    <tr><td>$123,256,644 USD</td></tr>
+                    <tr>
+                      <td>$123,256,644 USD</td>
+                    </tr>
                   </tbody>
                 </Table>
               </Card>
