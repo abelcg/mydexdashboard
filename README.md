@@ -8,6 +8,8 @@
 
 <hr>
 
+## ✨ [Presentation](https://docs.google.com/presentation/d/1XfJzL0Hj3IEIg7NHMIoGIvqu_EVY968-vGe0YlnlqSM/edit?usp=sharing)
+
 ## ✨ [Demo]()
 <br>
 
