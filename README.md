@@ -30,14 +30,14 @@ npm i
 ```sh
 npm start
 ```
-## Librerias usadas
+## Built With
 - React Router Dom V6
 - React Bootstrap
 - react-icons
 - recharts
 - Axios
 - luxon
-## Autor
+## Author
 
 👤 **Córdoba González, Abel**
 
