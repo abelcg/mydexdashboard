@@ -1,6 +1,7 @@
 <h1 align="center">MYDEX DASHBOARD</h1>
-<h2 align="center"> This project was one of the top winner for [Covalent's Hackathon: Camino A La Blockchain Y La Web3 Con Covalent Y RollingCode](https://gitcoin.co/issue/covalenthq/covalent-gitcoin-bounties/22/100028662)</h2>
+<h2 align="center"> This project was one of the top winner for Covalent's Hackathon: Camino A La Blockchain Y La Web3 Con Covalent Y RollingCode </h2>
 <hr>
+[Covalent's Hackathon](https://gitcoin.co/issue/covalenthq/covalent-gitcoin-bounties/22/100028662)
 <p>
 
 ## Description
