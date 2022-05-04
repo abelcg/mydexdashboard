@@ -1,5 +1,5 @@
 <h1 align="center">MYDEX DASHBOARD</h1>
-<h2 align="center">This is my submission for Covalent's Hackathon: Camino A La Blockchain Y La Web3 Con Covalent Y RollingCode</h2>
+<h2 align="center"> This project was one of the top winner for [Covalent's Hackathon: Camino A La Blockchain Y La Web3 Con Covalent Y RollingCode](https://gitcoin.co/issue/covalenthq/covalent-gitcoin-bounties/22/100028662)</h2>
 <hr>
 <p>
 
@@ -12,6 +12,12 @@
 
 ## ✨ [Demo](https://mydexdashboard.netlify.app/)
 <br>
+
+## Features
+⚡ Fully Responsive web application 
+⚡ Frontend created with React and React Bootstrap
+⚡ Backend powered by  Covalent Api
+
 
 ## Install
 
@@ -27,6 +33,7 @@ npm start
 - React Router Dom V6
 - React Bootstrap
 - react-icons
+- recharts
 - Axios
 - luxon
 ## Autor
